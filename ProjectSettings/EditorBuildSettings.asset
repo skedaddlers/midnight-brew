@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene_Cafe.unity
     guid: 750807b2662e73848b62efce0f078ac5
+  - enabled: 1
+    path: Assets/Scenes/Scene_Garden.unity
+    guid: 4127427abefdb594a8696d52a3aed6a3
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
