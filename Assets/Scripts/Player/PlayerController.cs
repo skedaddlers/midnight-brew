@@ -14,6 +14,11 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (!canMove)
+        {
+            rb.linearVelocity = Vector2.zero;
+            return;
+        }
         // 1. Get raw input instantly every frame
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");

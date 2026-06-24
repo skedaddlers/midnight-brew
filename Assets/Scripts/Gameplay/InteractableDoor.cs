@@ -6,7 +6,7 @@ public class InteractableDoor : Interactable
 
     protected override void Update()
     {
-        if(playerInside && Input.GetKeyDown(KeyCode.Space))
+        if(isInteractable && playerInside && Input.GetKeyDown(KeyCode.Space))
         {
             SceneLoader.LoadScene(sceneToLoad);
 
