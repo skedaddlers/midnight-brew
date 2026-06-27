@@ -665,7 +665,7 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 385028975}
+  - {fileID: 385028950}
   selectedCommands: []
   variables: []
   description: 
@@ -1090,8 +1090,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Fungus::Fungus.Block
   nodeRect:
     serializedVersion: 2
-    x: 267.98727
-    y: 66.97888
+    x: 266.6539
+    y: 68.31221
     width: 233.65999
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -1150,8 +1150,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Fungus::Fungus.Block
   nodeRect:
     serializedVersion: 2
-    x: 268.72104
-    y: 117.405106
+    x: 267.38773
+    y: 116.73845
     width: 230.98
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -1163,11 +1163,11 @@ MonoBehaviour:
   commandList:
   - {fileID: 385028974}
   - {fileID: 385028994}
+  - {fileID: 385028997}
   - {fileID: 385028996}
   - {fileID: 385028988}
   - {fileID: 385028981}
   - {fileID: 385028995}
-  - {fileID: 385028997}
   - {fileID: 385028998}
   - {fileID: 385028999}
   suppressAllAutoSelections: 0
@@ -1750,7 +1750,7 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       typeFullname: System.Boolean
       intValue: 0
-      boolValue: 0
+      boolValue: 1
       floatValue: 0
       stringValue: 
       colorValue: {r: 0, g: 0, b: 0, a: 0}

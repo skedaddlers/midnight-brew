@@ -16,6 +16,10 @@ public class BattleManager : MonoBehaviour
                 StoryManager.Instance.CurrentProgress = StoryProgress.FirstBattleFinished;
                 SceneLoader.LoadScene(afterBattleSceneName);
                 break;
+            case StoryProgress.SecondDay:
+                StoryManager.Instance.CurrentProgress = StoryProgress.SecondBattleFinished;
+                SceneLoader.LoadScene(afterBattleSceneName);
+                break;
         }
     }
 }

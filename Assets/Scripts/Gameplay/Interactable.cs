@@ -45,6 +45,10 @@ public class Interactable : MonoBehaviour
     public void SetInteractable(bool value)
     {
         isInteractable = value;
+        if(!isInteractable && playerInside)
+        {
+            UIManager.Instance.HideInteractionText();
+        }
     }
 
 }

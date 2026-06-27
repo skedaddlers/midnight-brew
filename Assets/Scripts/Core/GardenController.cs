@@ -7,7 +7,7 @@ public class GardenBattleController : MonoBehaviour
 
     public Flowchart flowchart;
     public string firstBlockName = "GardenBattle_Intro";
-    public string afterFirstBattleBlockName = "GardenBattle_AfterFirstBattle";
+    public string secondBlockName = "Garden_Fight2";
     void Start()
     {
         switch (StoryManager.Instance.CurrentProgress)
@@ -15,8 +15,8 @@ public class GardenBattleController : MonoBehaviour
             case StoryProgress.Opening:
                 flowchart.ExecuteBlock(firstBlockName);
                 break;
-            case StoryProgress.FirstBattleFinished:
-                flowchart.ExecuteBlock(afterFirstBattleBlockName);
+            case StoryProgress.SecondDay:
+                flowchart.ExecuteBlock(secondBlockName);
                 break;
         }
     }
