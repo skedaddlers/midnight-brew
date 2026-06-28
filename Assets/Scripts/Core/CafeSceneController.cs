@@ -4,6 +4,7 @@ using Fungus;
 public class CafeSceneController : MonoBehaviour
 {
     public static CafeSceneController Instance;
+    public GameObject player;
 
     public Flowchart flowchart;
     public string openingSceneName = "CafeScene_Intro";
@@ -16,6 +17,11 @@ public class CafeSceneController : MonoBehaviour
     public GameObject secondDaySceneGO;
     public GameObject secondBattleFinishedGO;
 
+    public Transform spawnPointOpeningScene;
+    public Transform spawnPointAfterFirstBattleScene;
+    public Transform spawnPointSecondDayScene;
+    public Transform spawnPointSecondBattleFinishedScene;
+
     void Start()
     {
         switch (StoryManager.Instance.CurrentProgress)
@@ -23,19 +29,31 @@ public class CafeSceneController : MonoBehaviour
             case StoryProgress.Opening:
                 SetActiveScene(openingSceneGO);
                 flowchart.ExecuteBlock(openingSceneName);
+                TeleportPlayerToSpawnPoint(spawnPointOpeningScene);
                 break;
             case StoryProgress.FirstBattleFinished:
                 SetActiveScene(afterFirstBattleSceneGO);
                 flowchart.ExecuteBlock(afterFirstBattleSceneName);
+                TeleportPlayerToSpawnPoint(spawnPointAfterFirstBattleScene);
                 break;
             case StoryProgress.SecondDay:
                 SetActiveScene(secondDaySceneGO);
                 flowchart.ExecuteBlock(secondDaySceneName);
+                TeleportPlayerToSpawnPoint(spawnPointSecondDayScene);
                 break;
             case StoryProgress.SecondBattleFinished:
                 SetActiveScene(secondBattleFinishedGO);
                 flowchart.ExecuteBlock(secondBattleFinishedSceneName);
+                TeleportPlayerToSpawnPoint(spawnPointSecondBattleFinishedScene);
                 break;
+        }
+    }
+
+    void TeleportPlayerToSpawnPoint(Transform spawnPoint)
+    {
+        if (player != null && spawnPoint != null)
+        {
+            player.transform.position = spawnPoint.position;
         }
     }
 

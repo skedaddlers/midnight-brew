@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca8b06b2d2784f46b4bd775f939cf593, type: 3}
+  m_Name: FirstBattle
+  m_EditorClassIdentifier: Assembly-CSharp::BattleEncounterData
+  encounterName: Encounter
+  enableTutorial: 1
+  allies:
+  - {fileID: 11400000, guid: fadedd8c120d625448c3e53a6df20454, type: 2}
+  - {fileID: 11400000, guid: 77a01cf36870e744a851b66020e4bdb9, type: 2}
+  enemies:
+  - {fileID: 11400000, guid: 61546f202b034ca42b033405f37b6815, type: 2}

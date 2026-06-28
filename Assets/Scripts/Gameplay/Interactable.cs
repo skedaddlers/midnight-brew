@@ -49,6 +49,9 @@ public class Interactable : MonoBehaviour
         {
             UIManager.Instance.HideInteractionText();
         }
+        if(isInteractable && playerInside)
+        {
+            UIManager.Instance.ShowInteractionText(interactionPrompt);
+        }
     }
-
 }
