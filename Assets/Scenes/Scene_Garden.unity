@@ -487,8 +487,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 54.53952
-    y: 68.312225
+    x: 60.789516
+    y: 70.39557
     width: 131.05334
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -535,8 +535,7 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 35062824}
+  selectedBlocks: []
   selectedCommands: []
   variables: []
   description: 
@@ -609,7 +608,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 521899417}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: b5b57e24b5b6f9341a613719f38af22e, type: 3}
+  portrait: {fileID: -5864103394280308169, guid: 4cb23bbde4e4dbf4c8fe8431cdf1df1a, type: 3}
   offset: 0
   fromPosition: {fileID: 1327654352}
   toPosition: {fileID: 737802364}
@@ -814,7 +813,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 2116326446}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 21928058e84f57143b2d9883d9a73574, type: 3}
+  portrait: {fileID: 6490621365336085879, guid: a03dce0f43d8bbd428bf855b7edd0e84, type: 3}
   offset: 0
   fromPosition: {fileID: 320101058}
   toPosition: {fileID: 1333795508}
@@ -900,7 +899,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 2116326446}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 21928058e84f57143b2d9883d9a73574, type: 3}
+  portrait: {fileID: 6490621365336085879, guid: a03dce0f43d8bbd428bf855b7edd0e84, type: 3}
   offset: 0
   fromPosition: {fileID: 320101058}
   toPosition: {fileID: 1333795508}
@@ -1083,7 +1082,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &35062838
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1110,7 +1109,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 0}
 --- !u!114 &35062839
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -1126,7 +1125,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 521899417}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: b5b57e24b5b6f9341a613719f38af22e, type: 3}
+  portrait: {fileID: -5864103394280308169, guid: 4cb23bbde4e4dbf4c8fe8431cdf1df1a, type: 3}
   offset: 0
   fromPosition: {fileID: 1327654352}
   toPosition: {fileID: 737802364}
@@ -1140,7 +1139,7 @@ MonoBehaviour:
   waitUntilFinished: 0
 --- !u!114 &35062840
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -3604,7 +3603,7 @@ MonoBehaviour:
   nameColor: {r: 1, g: 1, b: 1, a: 1}
   soundEffect: {fileID: 0}
   portraits:
-  - {fileID: 21300000, guid: b5b57e24b5b6f9341a613719f38af22e, type: 3}
+  - {fileID: -5864103394280308169, guid: 4cb23bbde4e4dbf4c8fe8431cdf1df1a, type: 3}
   portraitsFace: 1
   setSayDialog: {fileID: 0}
   description: 
@@ -11684,6 +11683,7 @@ MonoBehaviour:
   blackScreen: {fileID: 0}
   blackScreenText: {fileID: 0}
   interactionText: {fileID: 1530625196}
+  quitButton: {fileID: 0}
 --- !u!4 &1843872221
 Transform:
   m_ObjectHideFlags: 0
@@ -12702,7 +12702,7 @@ MonoBehaviour:
   nameColor: {r: 1, g: 1, b: 1, a: 1}
   soundEffect: {fileID: 0}
   portraits:
-  - {fileID: 21300000, guid: 21928058e84f57143b2d9883d9a73574, type: 3}
+  - {fileID: 6490621365336085879, guid: a03dce0f43d8bbd428bf855b7edd0e84, type: 3}
   portraitsFace: 1
   setSayDialog: {fileID: 0}
   description: 

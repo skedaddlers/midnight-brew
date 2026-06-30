@@ -61,6 +61,7 @@ GameObject:
   - component: {fileID: 3701694797735031316}
   - component: {fileID: 8983449932536077931}
   - component: {fileID: 6564277210891442515}
+  - component: {fileID: 6833193823436012583}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -133,7 +134,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4e58fd83f1bb49040825b94670f48507, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -221,7 +222,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2.0635698, y: 3.1051345}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -242,3 +243,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterMover
   moveSpeed: 3
+--- !u!114 &6833193823436012583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8981395591345183585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acade5d1b14a0a845995d256030b902d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FourDirectionSprite
+  spriteRenderer: {fileID: 7698934531969854083}
+  spriteUp: {fileID: 21300000, guid: 639ab9dcce6f5e64ea5523bcda170fe1, type: 3}
+  spriteDown: {fileID: 21300000, guid: 4e58fd83f1bb49040825b94670f48507, type: 3}
+  spriteLeft: {fileID: 21300000, guid: f595d04cc6c86a0438109b8b482178b1, type: 3}
+  spriteRight: {fileID: 21300000, guid: 6b98f8ab7928f384a81681d83731dd82, type: 3}

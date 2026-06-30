@@ -4,12 +4,14 @@ public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 8f;
     private Rigidbody2D rb;
+    private FourDirectionSprite directionSprite;
     private Vector2 inputDirection;
     private bool canMove = true;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        directionSprite = GetComponent<FourDirectionSprite>();
     }
 
     void Update()
@@ -24,6 +26,7 @@ public class PlayerController : MonoBehaviour
         float moveY = Input.GetAxisRaw("Vertical");
         
         inputDirection = new Vector2(moveX, moveY).normalized;
+        directionSprite?.SetDirection(inputDirection);
     }
 
     void FixedUpdate()
@@ -48,6 +51,8 @@ public class PlayerController : MonoBehaviour
     public void DisableMovement()
     {
         canMove = false;
+        inputDirection = Vector2.zero;
+        rb.linearVelocity = Vector2.zero;
     }
 
 }

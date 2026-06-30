@@ -811,7 +811,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Fungus::Fungus.Block
   nodeRect:
     serializedVersion: 2
-    x: 91.55996
+    x: 90.27793
     y: 125.57747
     width: 90.35333
     height: 40
@@ -893,7 +893,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 704993110}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: b5b57e24b5b6f9341a613719f38af22e, type: 3}
+  portrait: {fileID: -5864103394280308169, guid: 4cb23bbde4e4dbf4c8fe8431cdf1df1a, type: 3}
   offset: 0
   fromPosition: {fileID: 2017810301}
   toPosition: {fileID: 1099032422}
@@ -1054,7 +1054,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 704993110}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: b5b57e24b5b6f9341a613719f38af22e, type: 3}
+  portrait: {fileID: -5864103394280308169, guid: 4cb23bbde4e4dbf4c8fe8431cdf1df1a, type: 3}
   offset: 0
   fromPosition: {fileID: 2017810301}
   toPosition: {fileID: 1099032422}
@@ -1353,7 +1353,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 704993110}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: b5b57e24b5b6f9341a613719f38af22e, type: 3}
+  portrait: {fileID: -5864103394280308169, guid: 4cb23bbde4e4dbf4c8fe8431cdf1df1a, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 1099032422}
@@ -1690,7 +1690,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1963011641}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 21928058e84f57143b2d9883d9a73574, type: 3}
+  portrait: {fileID: 6490621365336085879, guid: a03dce0f43d8bbd428bf855b7edd0e84, type: 3}
   offset: 0
   fromPosition: {fileID: 1596327958}
   toPosition: {fileID: 1538314331}
@@ -1748,7 +1748,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 704993110}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: b5b57e24b5b6f9341a613719f38af22e, type: 3}
+  portrait: {fileID: -5864103394280308169, guid: 4cb23bbde4e4dbf4c8fe8431cdf1df1a, type: 3}
   offset: 0
   fromPosition: {fileID: 2017810301}
   toPosition: {fileID: 1099032422}
@@ -2243,7 +2243,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 704993110}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: b5b57e24b5b6f9341a613719f38af22e, type: 3}
+  portrait: {fileID: -5864103394280308169, guid: 4cb23bbde4e4dbf4c8fe8431cdf1df1a, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 1099032422}
@@ -2535,7 +2535,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 704993110}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: b5b57e24b5b6f9341a613719f38af22e, type: 3}
+  portrait: {fileID: -5864103394280308169, guid: 4cb23bbde4e4dbf4c8fe8431cdf1df1a, type: 3}
   offset: 0
   fromPosition: {fileID: 2017810301}
   toPosition: {fileID: 1099032422}
@@ -3044,7 +3044,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 704993110}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: b5b57e24b5b6f9341a613719f38af22e, type: 3}
+  portrait: {fileID: -5864103394280308169, guid: 4cb23bbde4e4dbf4c8fe8431cdf1df1a, type: 3}
   offset: 0
   fromPosition: {fileID: 2017810301}
   toPosition: {fileID: 1099032422}
@@ -3101,7 +3101,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1963011641}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 21928058e84f57143b2d9883d9a73574, type: 3}
+  portrait: {fileID: 6490621365336085879, guid: a03dce0f43d8bbd428bf855b7edd0e84, type: 3}
   offset: 0
   fromPosition: {fileID: 1596327958}
   toPosition: {fileID: 1538314331}
@@ -3689,7 +3689,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 704993110}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: b5b57e24b5b6f9341a613719f38af22e, type: 3}
+  portrait: {fileID: -5864103394280308169, guid: 4cb23bbde4e4dbf4c8fe8431cdf1df1a, type: 3}
   offset: 0
   fromPosition: {fileID: 2017810301}
   toPosition: {fileID: 1099032422}
@@ -3813,7 +3813,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 704993110}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: b5b57e24b5b6f9341a613719f38af22e, type: 3}
+  portrait: {fileID: -5864103394280308169, guid: 4cb23bbde4e4dbf4c8fe8431cdf1df1a, type: 3}
   offset: 0
   fromPosition: {fileID: 2017810301}
   toPosition: {fileID: 1099032422}
@@ -4115,7 +4115,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 704993110}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: b5b57e24b5b6f9341a613719f38af22e, type: 3}
+  portrait: {fileID: -5864103394280308169, guid: 4cb23bbde4e4dbf4c8fe8431cdf1df1a, type: 3}
   offset: 0
   fromPosition: {fileID: 2017810301}
   toPosition: {fileID: 1099032422}
@@ -4172,7 +4172,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1963011641}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 21928058e84f57143b2d9883d9a73574, type: 3}
+  portrait: {fileID: 6490621365336085879, guid: a03dce0f43d8bbd428bf855b7edd0e84, type: 3}
   offset: 0
   fromPosition: {fileID: 1596327958}
   toPosition: {fileID: 1538314331}
@@ -4319,7 +4319,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1963011641}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 21928058e84f57143b2d9883d9a73574, type: 3}
+  portrait: {fileID: 6490621365336085879, guid: a03dce0f43d8bbd428bf855b7edd0e84, type: 3}
   offset: 0
   fromPosition: {fileID: 1596327958}
   toPosition: {fileID: 1538314331}
@@ -4379,7 +4379,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1963011641}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 21928058e84f57143b2d9883d9a73574, type: 3}
+  portrait: {fileID: 6490621365336085879, guid: a03dce0f43d8bbd428bf855b7edd0e84, type: 3}
   offset: 0
   fromPosition: {fileID: 1596327958}
   toPosition: {fileID: 1538314331}
@@ -4874,7 +4874,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1963011641}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 21928058e84f57143b2d9883d9a73574, type: 3}
+  portrait: {fileID: 6490621365336085879, guid: a03dce0f43d8bbd428bf855b7edd0e84, type: 3}
   offset: 0
   fromPosition: {fileID: 1596327958}
   toPosition: {fileID: 1538314331}
@@ -5017,7 +5017,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1963011641}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 21928058e84f57143b2d9883d9a73574, type: 3}
+  portrait: {fileID: 6490621365336085879, guid: a03dce0f43d8bbd428bf855b7edd0e84, type: 3}
   offset: 0
   fromPosition: {fileID: 1596327958}
   toPosition: {fileID: 1538314331}
@@ -5295,7 +5295,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1963011641}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 21928058e84f57143b2d9883d9a73574, type: 3}
+  portrait: {fileID: 6490621365336085879, guid: a03dce0f43d8bbd428bf855b7edd0e84, type: 3}
   offset: 0
   fromPosition: {fileID: 1596327958}
   toPosition: {fileID: 1538314331}
@@ -5573,7 +5573,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 704993110}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: b5b57e24b5b6f9341a613719f38af22e, type: 3}
+  portrait: {fileID: -5864103394280308169, guid: 4cb23bbde4e4dbf4c8fe8431cdf1df1a, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 1099032422}
@@ -5603,7 +5603,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1963011641}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 21928058e84f57143b2d9883d9a73574, type: 3}
+  portrait: {fileID: 6490621365336085879, guid: a03dce0f43d8bbd428bf855b7edd0e84, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 1538314331}
@@ -5720,7 +5720,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1963011641}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 21928058e84f57143b2d9883d9a73574, type: 3}
+  portrait: {fileID: 6490621365336085879, guid: a03dce0f43d8bbd428bf855b7edd0e84, type: 3}
   offset: 0
   fromPosition: {fileID: 1596327958}
   toPosition: {fileID: 1538314331}
@@ -6158,7 +6158,7 @@ MonoBehaviour:
   stage: {fileID: 0}
   character: {fileID: 1963011641}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 21928058e84f57143b2d9883d9a73574, type: 3}
+  portrait: {fileID: 6490621365336085879, guid: a03dce0f43d8bbd428bf855b7edd0e84, type: 3}
   offset: 0
   fromPosition: {fileID: 0}
   toPosition: {fileID: 161253539}
@@ -8494,6 +8494,7 @@ GameObject:
   - component: {fileID: 604267494}
   - component: {fileID: 604267493}
   - component: {fileID: 604267492}
+  - component: {fileID: 604267496}
   m_Layer: 0
   m_Name: 'Kayla '
   m_TagString: Untagged
@@ -8640,7 +8641,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0.4391185, b: 0.39937097, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -8649,6 +8650,23 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &604267496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604267490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acade5d1b14a0a845995d256030b902d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FourDirectionSprite
+  spriteRenderer: {fileID: 604267495}
+  spriteUp: {fileID: 21300000, guid: 57268a22ada6a944691150a512187090, type: 3}
+  spriteDown: {fileID: 21300000, guid: d25b918442277ff46b553e44e74ae669, type: 3}
+  spriteLeft: {fileID: 21300000, guid: e6a4ba3db212fdc4493cb987dc4a2645, type: 3}
+  spriteRight: {fileID: 21300000, guid: 2b829eb4fa5514445b78e022010df6a1, type: 3}
 --- !u!1 &612269655
 GameObject:
   m_ObjectHideFlags: 0
@@ -8838,7 +8856,7 @@ MonoBehaviour:
   nameColor: {r: 1, g: 1, b: 1, a: 1}
   soundEffect: {fileID: 0}
   portraits:
-  - {fileID: 21300000, guid: b5b57e24b5b6f9341a613719f38af22e, type: 3}
+  - {fileID: -5864103394280308169, guid: 4cb23bbde4e4dbf4c8fe8431cdf1df1a, type: 3}
   portraitsFace: 1
   setSayDialog: {fileID: 0}
   description: 
@@ -10314,6 +10332,7 @@ GameObject:
   - component: {fileID: 1218602030}
   - component: {fileID: 1218602031}
   - component: {fileID: 1218602032}
+  - component: {fileID: 1218602033}
   m_Layer: 0
   m_Name: Kayla
   m_TagString: Untagged
@@ -10371,7 +10390,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0.4391185, b: 0.39937097, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -10469,6 +10488,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterMover
   moveSpeed: 6
+--- !u!114 &1218602033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218602027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acade5d1b14a0a845995d256030b902d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FourDirectionSprite
+  spriteRenderer: {fileID: 1218602028}
+  spriteUp: {fileID: 21300000, guid: 57268a22ada6a944691150a512187090, type: 3}
+  spriteDown: {fileID: 21300000, guid: d25b918442277ff46b553e44e74ae669, type: 3}
+  spriteLeft: {fileID: 21300000, guid: e6a4ba3db212fdc4493cb987dc4a2645, type: 3}
+  spriteRight: {fileID: 21300000, guid: 2b829eb4fa5514445b78e022010df6a1, type: 3}
 --- !u!1 &1228592662
 GameObject:
   m_ObjectHideFlags: 0
@@ -12268,51 +12304,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1437343391}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1764096085
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1764096087}
-  - component: {fileID: 1764096086}
-  m_Layer: 0
-  m_Name: st
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1764096086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1764096085}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b29c2ea5808687e4bbb4fc61d1d49a4f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::StoryManager
-  CurrentProgress: 2
---- !u!4 &1764096087
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1764096085}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 913.3307, y: 572.8338, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1765032894
 GameObject:
   m_ObjectHideFlags: 0
@@ -12632,6 +12623,7 @@ GameObject:
   - component: {fileID: 1914160464}
   - component: {fileID: 1914160463}
   - component: {fileID: 1914160462}
+  - component: {fileID: 1914160465}
   m_Layer: 0
   m_Name: Coffee NPC
   m_TagString: Untagged
@@ -12763,7 +12755,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.39999998, g: 0.92234856, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -12772,6 +12764,23 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1914160465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914160460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acade5d1b14a0a845995d256030b902d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FourDirectionSprite
+  spriteRenderer: {fileID: 1914160464}
+  spriteUp: {fileID: 21300000, guid: f974c9e76654bdd4990c5c7c843c6b02, type: 3}
+  spriteDown: {fileID: 21300000, guid: fa6c73a85feabb64c9afd2fdb2a49136, type: 3}
+  spriteLeft: {fileID: 21300000, guid: 9943f14382a598f4187799b66a8a27c2, type: 3}
+  spriteRight: {fileID: 21300000, guid: 9f9b66236c9293645a24623ccd6f30af, type: 3}
 --- !u!1 &1917584124
 GameObject:
   m_ObjectHideFlags: 0
@@ -12919,6 +12928,7 @@ GameObject:
   - component: {fileID: 1960109436}
   - component: {fileID: 1960109435}
   - component: {fileID: 1960109434}
+  - component: {fileID: 1960109437}
   m_Layer: 0
   m_Name: Kayla
   m_TagString: Untagged
@@ -13052,7 +13062,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0.4391185, b: 0.39937097, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -13061,6 +13071,23 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1960109437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960109432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acade5d1b14a0a845995d256030b902d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FourDirectionSprite
+  spriteRenderer: {fileID: 1960109436}
+  spriteUp: {fileID: 21300000, guid: 57268a22ada6a944691150a512187090, type: 3}
+  spriteDown: {fileID: 21300000, guid: d25b918442277ff46b553e44e74ae669, type: 3}
+  spriteLeft: {fileID: 21300000, guid: e6a4ba3db212fdc4493cb987dc4a2645, type: 3}
+  spriteRight: {fileID: 21300000, guid: 2b829eb4fa5514445b78e022010df6a1, type: 3}
 --- !u!1 &1963011639
 GameObject:
   m_ObjectHideFlags: 0
@@ -13109,7 +13136,7 @@ MonoBehaviour:
   nameColor: {r: 1, g: 1, b: 1, a: 1}
   soundEffect: {fileID: 0}
   portraits:
-  - {fileID: 21300000, guid: 21928058e84f57143b2d9883d9a73574, type: 3}
+  - {fileID: 6490621365336085879, guid: a03dce0f43d8bbd428bf855b7edd0e84, type: 3}
   portraitsFace: 1
   setSayDialog: {fileID: 0}
   description: 
@@ -13273,4 +13300,3 @@ SceneRoots:
   - {fileID: 1428451039}
   - {fileID: 1437343391}
   - {fileID: 92707952}
-  - {fileID: 1764096087}
