@@ -123,19 +123,19 @@ public sealed class BattleTutorial
         switch (Step)
         {
             case BattleTutorialStep.BasicAttack:
-                return "Gunakan Basic Attack. Basic Attack menghasilkan Energy dan memulihkan 1 Skill Point.";
+                return "Use Basic Attack. Basic Attack generates Energy and restores 1 Skill Point.";
             case BattleTutorialStep.EnemyWeakness:
-                return "Setiap musuh memiliki Weakness. Hanya serangan dengan Flavor yang cocok yang mengurangi Break Gauge. Garden Overflow lemah terhadap Bitter milik Rei.";
+                return "Each enemy has a Weakness. Only attacks with the matching Flavor reduce the Break Gauge. Garden Overflow is weak to Rei's Bitter.";
             case BattleTutorialStep.Skill:
-                return "Gunakan Skill. Skill mengonsumsi 1 Skill Point, tetapi menghasilkan damage atau efek yang lebih kuat.";
+                return "Use Skill. Skills consume 1 Skill Point but deal more damage or have stronger effects than Basic Attack. Skills also generate Energy.";
             case BattleTutorialStep.BreakGauge:
-                return "Serang Weakness untuk menghabiskan Break Gauge. Musuh yang Broken kehilangan defense dan akan melewatkan satu turn.";
+                return "Attack Weakness to deplete the Break Gauge. Broken enemies lose defense and will skip one turn.";
             case BattleTutorialStep.BreakEnemy:
-                return "Habiskan Break Gauge Garden Overflow. Perhatikan urutan ally berikutnya pada Turn Queue.";
+                return "Deplete Garden Overflow's Break Gauge. Watch the next ally in the Turn Queue.";
             case BattleTutorialStep.SupportChain:
-                return "Break memicu Support Chain. Ally dengan giliran terdekat akan memakai Support Skill secara otomatis tanpa mengonsumsi turn.";
+                return "Breaking triggers a Support Chain. The ally with the next turn will automatically use their Support Skill without consuming a turn.";
             case BattleTutorialStep.Ultimate:
-                return "Energy party telah diisi untuk tutorial. Gunakan Ultimate kapan saja; Ultimate tidak mengonsumsi turn.";
+                return "The party's Energy has been filled for the tutorial. Use Ultimate at any time; Ultimate does not consume a turn.";
             default:
                 return string.Empty;
         }

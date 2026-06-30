@@ -317,8 +317,8 @@ public sealed class BattleHUD : MonoBehaviour
         if (resultMessageText != null)
         {
             resultMessageText.text = victory
-                ? "Battle selesai. Lanjutkan story."
-                : "Party tidak dapat melanjutkan battle.";
+                ? "Battle won! You may continue the story."
+                : "Battle lost! You may retry the encounter.";
         }
 
         if (resultButtonLabel != null)

@@ -19,7 +19,6 @@ public class BattleManager : MonoBehaviour
     [Header("Story Integration")]
     public Flowchart flowchart;
     public string afterBattleSceneName = "Scene_Cafe";
-    [SerializeField] private bool autoStartAfterFlowchart = true;
 
     [Header("Battle Data")]
     [SerializeField] private BattleEncounterData firstBattleEncounter;
@@ -49,6 +48,7 @@ public class BattleManager : MonoBehaviour
     private int _actionSequence;
     private BattleUnit _pendingSupportUnit;
     private BattleUnit _pendingBrokenEnemy;
+    private BattleEncounterData _encounter;
 
     public event Action BattleChanged;
 
@@ -88,25 +88,12 @@ public class BattleManager : MonoBehaviour
 
     private IEnumerator Start()
     {
-        // The old button bypassed combat and only existed as a story-flow stub.
-        GameObject legacyEndButton = GameObject.Find("EndBattle");
-        if (legacyEndButton != null)
-        {
-            legacyEndButton.SetActive(false);
-        }
+        PrepareBattle();
 
-        if (!autoStartAfterFlowchart)
-        {
-            yield break;
-        }
-
-        // GardenBattleController starts its Fungus block during Start as well.
-        // One frame guarantees the block has had a chance to begin.
         yield return null;
-        while (flowchart != null && flowchart.HasExecutingBlocks())
-        {
+
+        while(flowchart != null && flowchart.HasExecutingBlocks())
             yield return null;
-        }
 
         StartBattle();
     }
@@ -121,25 +108,9 @@ public class BattleManager : MonoBehaviour
 
     public void StartBattle()
     {
-        if (State != BattleState.WaitingForIntro)
-        {
-            return;
-        }
-
-        StoryProgress progress = StoryManager.Instance != null
-            ? StoryManager.Instance.CurrentProgress
-            : StoryProgress.Opening;
-
-        BattleEncounterData encounter = progress == StoryProgress.SecondDay
-            ? secondBattleEncounter
-            : firstBattleEncounter;
-        if (!TryLoadEncounter(encounter))
-        {
-            return;
-        }
-
+        battleHud?.gameObject.SetActive(true);
         SkillPoints = Mathf.Clamp(startingSkillPoints, 0, maxSkillPoints);
-        _tutorial.Begin(encounter.EnableTutorial);
+        _tutorial.Begin(_encounter.EnableTutorial);
 
         for (int i = 0; i < _allies.Count; i++)
         {
@@ -152,7 +123,6 @@ public class BattleManager : MonoBehaviour
         }
 
         State = BattleState.Resolving;
-        AddLog($"{encounter.EncounterName} started against {_enemies[0].DisplayName}.");
         NotifyChanged();
         AdvanceTurn();
     }
@@ -367,6 +337,7 @@ public class BattleManager : MonoBehaviour
         _actionSequence = 0;
         _pendingSupportUnit = null;
         _pendingBrokenEnemy = null;
+        _encounter = null;
         CurrentUnit = null;
 
         for (int i = 0; i < _spawnedBattleObjects.Count; i++)
@@ -404,7 +375,25 @@ public class BattleManager : MonoBehaviour
         SpawnBattlePrefabs(_allies, allySpawnPoints);
         SpawnBattlePrefabs(_enemies, enemySpawnPoints);
 
+        _encounter = encounter;
+
         return true;
+    }
+
+    private void PrepareBattle()
+    {
+        StoryProgress progress = StoryManager.Instance != null
+            ? StoryManager.Instance.CurrentProgress
+            : StoryProgress.Opening;
+
+        BattleEncounterData encounter = progress == StoryProgress.SecondDay
+            ? secondBattleEncounter
+            : firstBattleEncounter;
+
+        TryLoadEncounter(encounter);
+
+        if (battleHud != null)
+            battleHud.gameObject.SetActive(false);
     }
 
     private void SpawnBattlePrefabs(IReadOnlyList<BattleUnit> units, IReadOnlyList<Transform> spawnPoints)

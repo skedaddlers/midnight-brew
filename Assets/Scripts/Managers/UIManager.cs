@@ -11,6 +11,8 @@ public class UIManager : MonoBehaviour
     public CanvasGroup blackScreen;
     public TextMeshProUGUI blackScreenText;
     public TextMeshProUGUI interactionText;
+
+    public Button quitButton;
     
     void Awake()
     {
@@ -21,6 +23,29 @@ public class UIManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+        }
+    }
+
+    void Start()
+    {
+        if (blackScreen != null)
+        {
+            blackScreen.alpha = 0f;
+            blackScreen.gameObject.SetActive(false);
+        }
+
+        if (interactionText != null)
+        {
+            interactionText.gameObject.SetActive(false);
+        }
+
+        if (quitButton != null)
+        {
+            quitButton.gameObject.SetActive(false);
+            quitButton.onClick.AddListener(() =>
+            {
+                Application.Quit();
+            });
         }
     }
 
@@ -86,5 +111,19 @@ public class UIManager : MonoBehaviour
         );
     
     }
-    
+
+    public void ShowEnd(string text)
+    {
+        if (blackScreenText != null)
+        {
+            blackScreenText.text = text;
+            blackScreenText.gameObject.SetActive(true);
+            blackScreen.gameObject.SetActive(true);
+            blackScreen.FadeIn(0.5f, 0f, Ease.Linear);
+        }
+        if (quitButton != null)
+        {
+            quitButton.gameObject.SetActive(true);
+        }
+    }
 }

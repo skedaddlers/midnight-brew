@@ -42,6 +42,14 @@ public class Interactable : MonoBehaviour
         }
     }
 
+    protected virtual void OnTriggerStay2D(Collider2D other)
+    {
+        if(isInteractable && other.CompareTag("Player"))
+        {
+            playerInside = true;
+        }
+    }
+
     public void SetInteractable(bool value)
     {
         isInteractable = value;
