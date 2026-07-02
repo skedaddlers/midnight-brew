@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 inputDirection;
     private bool canMove = true;
 
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         directionSprite = GetComponent<FourDirectionSprite>();

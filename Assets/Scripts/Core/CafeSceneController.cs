@@ -24,6 +24,7 @@ public class CafeSceneController : MonoBehaviour
 
     void Start()
     {
+        AudioManager.Instance?.PlayBackgroundMusic();
         switch (StoryManager.Instance.CurrentProgress)
         {
             case StoryProgress.Opening:

@@ -40,6 +40,7 @@ MonoBehaviour:
     healTargetMaxHpMultiplier: 0
     attackBuffPercent: 0
     attackBuffTurns: 0
+    actionSound: {fileID: 8300000, guid: c0b062074132ad248b6c3cabf17793bb, type: 3}
   skill:
     displayName: Coffee Break
     effect: 0
@@ -54,6 +55,7 @@ MonoBehaviour:
     healTargetMaxHpMultiplier: 0
     attackBuffPercent: 0
     attackBuffTurns: 0
+    actionSound: {fileID: 8300000, guid: c0b062074132ad248b6c3cabf17793bb, type: 3}
   ultimate:
     displayName: Mega Bitter Fury
     effect: 0
@@ -68,6 +70,7 @@ MonoBehaviour:
     healTargetMaxHpMultiplier: 0
     attackBuffPercent: 0
     attackBuffTurns: 0
+    actionSound: {fileID: 8300000, guid: 9d2f637b1b3e7414d92fa2fa99194d60, type: 3}
   supportSkill:
     displayName: Cafeine Boost
     effect: 3
@@ -82,4 +85,5 @@ MonoBehaviour:
     healTargetMaxHpMultiplier: 0
     attackBuffPercent: 0.15
     attackBuffTurns: 2
+    actionSound: {fileID: 8300000, guid: 2b46707ef82c89f43bc7baaa7a60afc5, type: 3}
   enemyPattern: []

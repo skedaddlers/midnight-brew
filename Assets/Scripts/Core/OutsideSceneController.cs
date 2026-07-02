@@ -16,6 +16,7 @@ public class OutsideSceneController : MonoBehaviour
 
     void Start()
     {
+        AudioManager.Instance?.PlayBackgroundMusic();
         switch (StoryManager.Instance.CurrentProgress)
         {
             case StoryProgress.Opening:

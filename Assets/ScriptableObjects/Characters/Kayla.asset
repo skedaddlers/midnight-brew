@@ -40,6 +40,7 @@ MonoBehaviour:
     healTargetMaxHpMultiplier: 0
     attackBuffPercent: 0
     attackBuffTurns: 0
+    actionSound: {fileID: 8300000, guid: c0b062074132ad248b6c3cabf17793bb, type: 3}
   skill:
     displayName: Glazing Protection
     effect: 2
@@ -47,13 +48,14 @@ MonoBehaviour:
     powerMultiplier: 1
     hitCount: 1
     breakDamagePerHit: 0
-    energyGain: 0
+    energyGain: 25
     skillPointDelta: -1
     shieldSourceMaxHpMultiplier: 0.1
     healFromDamageRatio: 0
     healTargetMaxHpMultiplier: 0
     attackBuffPercent: 0
     attackBuffTurns: 0
+    actionSound: {fileID: 8300000, guid: 9444e785416031d42ac8a064db6628f5, type: 3}
   ultimate:
     displayName: All Out Sweetness
     effect: 5
@@ -68,6 +70,7 @@ MonoBehaviour:
     healTargetMaxHpMultiplier: 0
     attackBuffPercent: 0
     attackBuffTurns: 0
+    actionSound: {fileID: 8300000, guid: ec553e38eaa2e494d80c2b3e869645da, type: 3}
   supportSkill:
     displayName: Sugary Goodness
     effect: 4
@@ -82,4 +85,5 @@ MonoBehaviour:
     healTargetMaxHpMultiplier: 0.06
     attackBuffPercent: 0.1
     attackBuffTurns: 1
+    actionSound: {fileID: 8300000, guid: 9444e785416031d42ac8a064db6628f5, type: 3}
   enemyPattern: []

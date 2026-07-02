@@ -574,11 +574,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 445.16556, y: 331.24576}
+  scrollPos: {x: 570.6574, y: 306.09677}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.52000046
+  zoom: 0.43000045
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -587,7 +587,8 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 35062936}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 35063042}
   variables: []
   description: 
   stepPause: 0
@@ -5938,7 +5939,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Fungus::Fungus.Say
   itemId: 267
   indentLevel: 0
-  storyText: "\u201DOH\u2026 NO! REI! FOLLOW ME TO THE GARDEN!"
+  storyText: "OH\u2026 NO! REI! FOLLOW ME TO THE GARDEN!"
   description: 
   character: {fileID: 704993110}
   portrait: {fileID: 0}
@@ -6100,7 +6101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Fungus::Fungus.Say
   itemId: 272
   indentLevel: 0
-  storyText: "\u201CYou can laugh after all!"
+  storyText: You can laugh after all!
   description: 
   character: {fileID: 704993110}
   portrait: {fileID: 0}
@@ -6202,7 +6203,7 @@ MonoBehaviour:
   waitUntilFinished: 0
 --- !u!114 &35063052
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -6223,7 +6224,7 @@ MonoBehaviour:
   rotTweenType: 4
 --- !u!114 &35063053
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -6239,7 +6240,7 @@ MonoBehaviour:
   target: {fileID: 1186420550}
 --- !u!114 &35063054
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -6255,7 +6256,7 @@ MonoBehaviour:
   target: {fileID: 1805232410}
 --- !u!114 &35063055
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -6271,7 +6272,7 @@ MonoBehaviour:
   target: {fileID: 1805232410}
 --- !u!114 &35063056
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -11817,9 +11818,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 266931820}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -664, y: 233}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 296, y: 233}
   m_SizeDelta: {x: 493.6868, y: 104.579}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1577904700

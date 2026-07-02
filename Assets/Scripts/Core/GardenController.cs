@@ -10,6 +10,7 @@ public class GardenBattleController : MonoBehaviour
     public string secondBlockName = "Garden_Fight2";
     void Start()
     {
+        AudioManager.Instance?.PlayBattleMusic();
         switch (StoryManager.Instance.CurrentProgress)
         {
             case StoryProgress.Opening:

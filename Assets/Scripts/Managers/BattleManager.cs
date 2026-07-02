@@ -290,11 +290,32 @@ public class BattleManager : MonoBehaviour
             yield return animationController.PlayHit(targetView);
         }
 
-        if(action != actor.Definition.Ultimate)
+        ApplyActionResources(actor, action);
+        CompleteNormalTurn(actor);
+    }
+
+    private IEnumerator PlaySupportRoutine(BattleUnit supporter, BattleUnit brokenEnemy)
+    {
+        if (supporter == null || brokenEnemy == null || !supporter.IsAlive)
         {
-            ApplyActionResources(actor, action);
-            CompleteNormalTurn(actor);
+            yield break;
         }
+
+        BattleActionData action = supporter.Definition.SupportSkill;
+        if (action == null)
+        {
+            AddLog($"{supporter.DisplayName} has no configured Support Skill.");
+            yield break;
+        }
+
+        yield return animationController.PlayAction(
+            supporter,
+            action
+        );
+
+        ExecuteAction(supporter, action, brokenEnemy);
+        supporter.GainEnergy(action.energyGain);
+        NotifyChanged();
     }
 
     private IEnumerator PlayUltimateRoutine(
@@ -859,10 +880,8 @@ public class BattleManager : MonoBehaviour
         }
 
         AddLog($"Support Chain: {supporter.DisplayName} acts without consuming a turn.");
-        ExecuteAction(supporter, action, brokenEnemy);
-        supporter.GainEnergy(action.energyGain);
+        StartCoroutine(PlaySupportRoutine(supporter, brokenEnemy));
 
-        NotifyChanged();
     }
 
     private BattleUnit GetLivingEnemy(int preferredIndex)
