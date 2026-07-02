@@ -36,11 +36,15 @@ public class BattleManager : MonoBehaviour
     [SerializeField, Min(0)] private int startingSkillPoints = 3;
     [SerializeField, Range(0f, 1f)] private float brokenDefenseReduction = 0.3f;
 
+    [Header("Optional Animation Controller")]
+    [SerializeField] private BattleAnimationController animationController;
+
     private readonly List<BattleUnit> _allies = new List<BattleUnit>();
     private readonly List<BattleUnit> _enemies = new List<BattleUnit>();
     private readonly List<TimelineSlot> _timeline = new List<TimelineSlot>();
     private readonly List<string> _battleLog = new List<string>();
     private readonly List<GameObject> _spawnedBattleObjects = new List<GameObject>();
+    private readonly Dictionary<BattleUnit, GameObject> _unitToViewMap = new Dictionary<BattleUnit, GameObject>();
     private readonly BattleTutorial _tutorial = new BattleTutorial();
 
     private float _timelineClock;
@@ -174,11 +178,13 @@ public class BattleManager : MonoBehaviour
         BattleUnit actor = CurrentUnit;
         _actionSequence++;
 
-        ExecuteAction(actor, actor.Definition.BasicAttack, target);
-        ApplyActionResources(actor, actor.Definition.BasicAttack);
+        StartCoroutine(PlayAttackRoutine(
+            actor,
+            target,
+            actor.Definition.BasicAttack
+        ));
         _tutorial.OnPlayerAction(BattleActionType.BasicAttack);
 
-        CompleteNormalTurn(actor);
         return true;
     }
 
@@ -198,10 +204,12 @@ public class BattleManager : MonoBehaviour
 
         State = BattleState.Resolving;
         _actionSequence++;
-        ExecuteAction(actor, actor.Definition.Skill, target);
-        ApplyActionResources(actor, actor.Definition.Skill);
+        StartCoroutine(PlayAttackRoutine(
+            actor,
+            target,
+            actor.Definition.Skill
+        ));
         _tutorial.OnPlayerAction(BattleActionType.Skill);
-        CompleteNormalTurn(actor);
         return true;
     }
 
@@ -223,28 +231,12 @@ public class BattleManager : MonoBehaviour
         BattleState previousState = State;
         State = BattleState.Resolving;
         actor.SpendUltimateEnergy();
-        ExecuteAction(actor, ultimate, target);
+        StartCoroutine(PlayUltimateRoutine(
+            actor,
+            target
+        ));
 
         _tutorial.OnPlayerAction(BattleActionType.Ultimate);
-
-        if (CheckBattleEnd())
-        {
-            return true;
-        }
-
-        if (CurrentUnit != null && CurrentUnit.Team == BattleTeam.Ally)
-        {
-            State = BattleState.AwaitingPlayerInput;
-            NotifyChanged();
-        }
-        else
-        {
-            State = previousState == BattleState.AwaitingPlayerInput
-                ? BattleState.AwaitingPlayerInput
-                : BattleState.Resolving;
-            NotifyChanged();
-            AdvanceTurn();
-        }
 
         return true;
     }
@@ -278,6 +270,102 @@ public class BattleManager : MonoBehaviour
         {
             AdvanceTurn();
         }
+    }
+
+    private IEnumerator PlayAttackRoutine(BattleUnit actor, BattleUnit target, BattleActionData action)
+    {
+        if (actor == null || target == null || action == null)
+        {
+            yield break;
+        }
+
+        yield return animationController.PlayAction(actor, action);
+
+        ExecuteAction(actor, action, target);
+
+        if (action.IsDamagingAction)
+        {
+            GameObject targetView = null;
+            targetView = _unitToViewMap.TryGetValue(target, out GameObject view) ? view : null;
+            yield return animationController.PlayHit(targetView);
+        }
+
+        if(action != actor.Definition.Ultimate)
+        {
+            ApplyActionResources(actor, action);
+            CompleteNormalTurn(actor);
+        }
+    }
+
+    private IEnumerator PlayUltimateRoutine(
+        BattleUnit actor,
+        BattleUnit target)
+    {
+        yield return animationController.PlayAction(
+            actor,
+            actor.Definition.Ultimate);
+
+        ExecuteAction(actor, actor.Definition.Ultimate, target);
+
+        NotifyChanged();
+
+        if (actor.Definition.Ultimate.IsDamagingAction)
+        {
+            GameObject targetView = null;
+            targetView = _unitToViewMap.TryGetValue(target, out GameObject view) ? view : null;
+            yield return animationController.PlayHit(targetView);
+        }
+
+        if (CheckBattleEnd())
+            yield break;
+
+        if (CurrentUnit != null &&
+            CurrentUnit.Team == BattleTeam.Ally)
+        {
+            State = BattleState.AwaitingPlayerInput;
+        }
+        else
+        {
+            State = BattleState.Resolving;
+            AdvanceTurn();
+        }
+
+        NotifyChanged();
+    }
+
+    private IEnumerator PlayEnemyRoutine(BattleUnit enemy)
+    {
+        _actionSequence++;
+        BattleActionData[] pattern = enemy.Definition.EnemyPattern;
+        if (pattern == null || pattern.Length == 0)
+        {
+            AddLog($"{enemy.DisplayName} has no configured enemy action and skips its turn.");
+            yield return new WaitForSeconds(0.5f);
+        }
+
+        BattleActionData action = pattern[enemy.EnemyPatternIndex % pattern.Length];
+        if (action == null)
+        {
+            AddLog($"{enemy.DisplayName}'s enemy pattern contains an empty action.");
+            enemy.EnemyPatternIndex++;
+            yield break;
+        }
+        yield return animationController.PlayAction(
+            enemy,
+            action
+        );
+        BattleUnit target = PickRandomLivingOpponent(enemy);
+        ExecuteAction(enemy, action, target);
+        enemy.GainEnergy(action.energyGain);
+        enemy.EnemyPatternIndex++;
+
+        if (action.IsDamagingAction)
+        {
+            GameObject targetView = null;
+            targetView = _unitToViewMap.TryGetValue(target, out GameObject view) ? view : null;
+            yield return animationController.PlayHit(targetView);
+        }
+        CompleteNormalTurn(enemy);
     }
 
     public List<BattleQueueEntry> GetTurnQueue(int maxEntries = 8)
@@ -415,6 +503,7 @@ public class BattleManager : MonoBehaviour
 
             GameObject instance = Instantiate(prefab, spawnPoint.position, spawnPoint.rotation, spawnPoint);
             _spawnedBattleObjects.Add(instance);
+            _unitToViewMap[units[i]] = instance;
         }
     }
 
@@ -514,8 +603,7 @@ public class BattleManager : MonoBehaviour
 
         State = BattleState.Resolving;
         NotifyChanged();
-        ExecuteEnemyTurn(CurrentUnit);
-        CompleteNormalTurn(CurrentUnit);
+        StartCoroutine(PlayEnemyRoutine(CurrentUnit));
     }
 
     private TimelineSlot PopNextLivingSlot()
@@ -555,29 +643,6 @@ public class BattleManager : MonoBehaviour
             NotifyChanged();
             AdvanceTurn();
         }
-    }
-
-    private void ExecuteEnemyTurn(BattleUnit enemy)
-    {
-        _actionSequence++;
-        BattleActionData[] pattern = enemy.Definition.EnemyPattern;
-        if (pattern == null || pattern.Length == 0)
-        {
-            AddLog($"{enemy.DisplayName} has no configured enemy action and skips its turn.");
-            return;
-        }
-
-        BattleActionData action = pattern[enemy.EnemyPatternIndex % pattern.Length];
-        if (action == null)
-        {
-            AddLog($"{enemy.DisplayName}'s enemy pattern contains an empty action.");
-            enemy.EnemyPatternIndex++;
-            return;
-        }
-
-        ExecuteAction(enemy, action, PickRandomLivingOpponent(enemy));
-        enemy.GainEnergy(action.energyGain);
-        enemy.EnemyPatternIndex++;
     }
 
     private int ExecuteAction(BattleUnit source, BattleActionData action, BattleUnit preferredTarget)

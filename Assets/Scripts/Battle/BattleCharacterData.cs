@@ -11,6 +11,7 @@ public sealed class BattleCharacterData : ScriptableObject
     [SerializeField] private FlavorType flavor;
     [SerializeField] private FlavorType[] weaknesses = Array.Empty<FlavorType>();
     [SerializeField] private Sprite portrait;
+    [SerializeField] private Sprite attackPortrait;
     [SerializeField] private GameObject battlePrefab;
 
     [Header("Stats")]
@@ -37,6 +38,7 @@ public sealed class BattleCharacterData : ScriptableObject
     public FlavorType Flavor => flavor;
     public FlavorType[] Weaknesses => weaknesses;
     public Sprite Portrait => portrait;
+    public Sprite AttackPortrait => attackPortrait;
     public GameObject BattlePrefab => battlePrefab;
     public int MaxHp => maxHp;
     public int Attack => attack;

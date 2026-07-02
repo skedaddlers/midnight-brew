@@ -66,6 +66,11 @@ public sealed class BattleActionData
     [Min(0f)] public float healTargetMaxHpMultiplier;
     [Min(0f)] public float attackBuffPercent;
     [Min(0)] public int attackBuffTurns;
+    public AudioClip actionSound;
+    public bool IsDamagingAction =>
+        effect == BattleActionEffect.SingleTargetDamage ||
+        effect == BattleActionEffect.AllOpponentsDamage ||
+        effect == BattleActionEffect.AllOpponentsDamageAndHealLowestHpAlly;
 }
 
 public readonly struct BattleQueueEntry

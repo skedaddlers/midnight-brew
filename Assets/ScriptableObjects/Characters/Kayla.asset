@@ -17,7 +17,8 @@ MonoBehaviour:
   team: 0
   flavor: 2
   weaknesses: 
-  portrait: {fileID: 21300000, guid: b5b57e24b5b6f9341a613719f38af22e, type: 3}
+  portrait: {fileID: -5864103394280308169, guid: 4cb23bbde4e4dbf4c8fe8431cdf1df1a, type: 3}
+  attackPortrait: {fileID: 21300000, guid: c97d806f4b7587948be4fb910dcc2eb7, type: 3}
   battlePrefab: {fileID: 3439245373023532442, guid: 669bf53eca015ac4ea614a08f99871ab, type: 3}
   maxHp: 900
   attack: 90

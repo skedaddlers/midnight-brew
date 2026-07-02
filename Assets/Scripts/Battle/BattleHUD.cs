@@ -19,6 +19,9 @@ public sealed class BattleHUD : MonoBehaviour
     [Header("Battle Information")]
     [SerializeField] private TMP_Text currentTurnText;
     [SerializeField] private TMP_Text skillPointsText;
+    [SerializeField] private Button openBattleLogButton;
+    [SerializeField] private Button closeBattleLogButton;
+    [SerializeField] private GameObject battleLogPanel;
     [SerializeField] private TMP_Text battleLogText;
 
     [Header("Commands")]
@@ -88,6 +91,8 @@ public sealed class BattleHUD : MonoBehaviour
         skillButton?.onClick.AddListener(OnSkillClicked);
         tutorialContinueButton?.onClick.AddListener(OnTutorialContinueClicked);
         resultButton?.onClick.AddListener(OnResultClicked);
+        openBattleLogButton?.onClick.AddListener(OnToggleBattleLogClicked);
+        closeBattleLogButton?.onClick.AddListener(OnToggleBattleLogClicked);
 
         if (enemyViews != null)
         {
@@ -392,6 +397,25 @@ public sealed class BattleHUD : MonoBehaviour
         else if (_battle.State == BattleState.Defeat)
         {
             _battle.RestartBattle();
+        }
+    }
+
+    private void OnToggleBattleLogClicked()
+    {
+        if (battleLogPanel == null)
+        {
+            return;
+        }
+
+        bool isActive = battleLogPanel.activeSelf;
+        battleLogPanel.SetActive(!isActive);
+        if (!isActive && openBattleLogButton != null)
+        {
+            openBattleLogButton.interactable = false;
+        }
+        else if (isActive && openBattleLogButton != null)
+        {
+            openBattleLogButton.interactable = true;
         }
     }
 
